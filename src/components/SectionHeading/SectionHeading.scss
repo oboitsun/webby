@@ -1,0 +1,14 @@
+@import "../../variables.scss";
+.SectionHeading {
+  font-weight: 900;
+  font-size: toRem(16);
+  text-align: center;
+  margin-bottom: toRem(16);
+  line-height: 1;
+  @media (min-width: toRem(1024)) {
+    font-size: toRem(24);
+  }
+  @media (min-width: toRem(1280)) {
+    font-size: toRem(32);
+  }
+}

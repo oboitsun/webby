@@ -1,0 +1,60 @@
+@import "../../variables.scss";
+.Benefits {
+  padding-bottom: toRem(80);
+  .Article {
+    text-align: center;
+    margin-bottom: toRem(24);
+  }
+  &__benefit {
+    background: $lightGray;
+    padding: toRem(20);
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    column-gap: toRem(16);
+    border-radius: 8px;
+    .icon-wrapper {
+      width: toRem(48);
+      height: toRem(48);
+      background: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 8px;
+      .icon {
+        width: toRem(20);
+      }
+    }
+    .heading {
+      font-weight: 800;
+      color: black;
+      font-size: toRem(14);
+      line-height: calc(17 / 14);
+    }
+    .text {
+      font-size: toRem(8);
+      color: $gray;
+      line-height: toRem(14);
+    }
+  }
+  @media (min-width: toRem(1024)) {
+    padding-bottom: toRem(120);
+  }
+  @media (min-width: toRem(1280)) {
+    &__benefit {
+      padding: toRem(30);
+
+      .icon-wrapper {
+        width: toRem(56);
+        height: toRem(56);
+      }
+      .heading {
+        font-size: toRem(20);
+        line-height: toRem(24);
+      }
+      .text {
+        font-size: toRem(12);
+        line-height: toRem(22);
+      }
+    }
+  }
+}

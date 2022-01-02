@@ -1,0 +1,42 @@
+@import "../../variables.scss";
+.Header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  &__inner-wrapper {
+    @apply flex items-center justify-between py-10;
+  }
+  &__logo {
+    max-width: toRem(100);
+  }
+  &__anchor {
+    font-weight: 700;
+    color: $gray;
+    line-height: 1;
+    font-size: toRem(14);
+  }
+  &__getStarted {
+    font-weight: 800;
+    line-height: 1;
+    color: white;
+    background: $green;
+    padding: toRem(16) toRem(24);
+    border-radius: toRem(8);
+    font-size: toRem(14);
+  }
+  @media (min-width: toRem(1024)) {
+    &__logo {
+      max-width: toRem(120);
+    }
+  }
+  @media (min-width: toRem(1280)) {
+    &__logo {
+      max-width: toRem(180);
+    }
+    &__anchor {
+      font-size: toRem(16);
+    }
+  }
+}

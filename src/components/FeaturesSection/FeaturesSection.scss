@@ -1,0 +1,120 @@
+@import "../../variables.scss";
+.FeaturesSection {
+  padding-bottom: toRem(60);
+  .Article {
+    text-align: center;
+  }
+  &__tabButton {
+    &.active {
+      background: $green;
+      color: white;
+    }
+    margin-right: toRem(16);
+    background: $lightGray;
+    padding: toRem(10);
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    column-gap: toRem(10);
+    border-radius: 8px;
+    align-content: center;
+    margin-bottom: toRem(16);
+    .icon {
+      width: toRem(22);
+      height: toRem(22);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: white;
+    }
+    span {
+      text-transform: capitalize;
+      align-self: center;
+      font-weight: 800;
+      line-height: 1;
+      font-size: toRem(12);
+    }
+  }
+  &__tabButton:nth-child(7n) {
+    margin-left: toRem(40) !important;
+  }
+  &__tabButton:nth-child(n + 7) {
+    margin-right: 0;
+    margin-left: toRem(20);
+  }
+  &__currentTab {
+    display: grid;
+    grid-template-columns: 1fr;
+    .Article {
+      text-align: left;
+    }
+    .heading {
+      font-weight: 900;
+    }
+  }
+  &__free-trial {
+    margin-top: toRem(8);
+    width: 100%;
+
+    padding: toRem(16) 0;
+    @apply flex items-center justify-center font-extrabold;
+    font-size: toRem(14);
+    color: white;
+    border-radius: 8px;
+    background: $green;
+    line-height: 1;
+  }
+  @media (min-width: toRem(1024)) {
+    padding-bottom: toRem(80);
+    &__tabs {
+      width: 100%;
+      padding: 0 toRem(80);
+      margin: 0 auto;
+    }
+    &__tabButton {
+      margin-right: toRem(24);
+    }
+    &__tabButton:nth-child(6n) {
+      margin-right: 0;
+    }
+    &__tabButton:nth-child(7n) {
+      margin-left: toRem(60) !important;
+    }
+    &__tabButton:nth-child(n + 7) {
+      margin-right: 0;
+      margin-left: toRem(24);
+    }
+    &__currentTab {
+      grid-template-columns: 1.1fr 1fr;
+      column-gap: toRem(40);
+
+      .heading {
+        font-size: toRem(24);
+      }
+    }
+    &__free-trial {
+      max-width: toRem(248);
+    }
+  }
+
+  @media (min-width: toRem(1280)) {
+    padding-bottom: toRem(120);
+    &__tabs {
+      max-width: toRem(1280);
+    }
+    &__tabButton {
+      .icon {
+        width: toRem(40);
+        height: toRem(40);
+      }
+      span {
+        font-size: toRem(16);
+      }
+    }
+    &__currentTab {
+      .heading {
+        font-size: toRem(32);
+      }
+    }
+  }
+}

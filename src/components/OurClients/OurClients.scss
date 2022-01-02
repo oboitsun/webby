@@ -1,0 +1,26 @@
+@import "../../variables.scss";
+.OurClients {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 36px;
+  justify-content: center;
+  align-items: center;
+  row-gap: 16px;
+  opacity: 0.5;
+  img {
+    width: 24%;
+    flex-shrink: 1;
+  }
+  @media (min-width: toRem(1024)) {
+    margin-top: toRem(48);
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+    img {
+      width: 100%;
+      max-width: max-content;
+    }
+  }
+  @media (min-width: toRem(1280)) {
+  }
+}

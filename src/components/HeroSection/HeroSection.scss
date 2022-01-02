@@ -1,0 +1,44 @@
+@import "../../variables.scss";
+.HeroSection {
+  padding: toRem(102) 0;
+  &__h1 {
+    font-weight: 900;
+    font-size: toRem(24);
+    line-height: 1.3;
+    margin-bottom: toRem(8);
+  }
+  &__button {
+    width: 100%;
+    padding: toRem(16) 0;
+    @apply flex items-center justify-center font-extrabold;
+    font-size: toRem(14);
+    color: white;
+    border-radius: 8px;
+
+    &.green {
+      background: $green;
+    }
+    &.gray {
+      background: $lightGray;
+      color: black;
+    }
+  }
+  @media (min-width: toRem(1024)) {
+    padding: toRem(160) 0;
+    &__h1 {
+      font-size: toRem(32);
+    }
+    &__button {
+      max-width: toRem(176);
+    }
+  }
+  @media (min-width: toRem(1280)) {
+    &__h1 {
+      font-size: toRem(44);
+      margin-bottom: toRem(16);
+    }
+    .Article {
+      max-width: toRem(502);
+    }
+  }
+}

@@ -1,0 +1,13 @@
+@import "../../variables.scss";
+.Article {
+  color: $gray;
+  font-size: toRem(10);
+  line-height: calc(24 / 10);
+  font-weight: 500;
+  @media (min-width: toRem(1024)) {
+    font-size: toRem(12);
+  }
+  @media (min-width: toRem(1280)) {
+    font-size: toRem(14);
+  }
+}
