@@ -1,0 +1,60 @@
+@import "../../variables.scss";
+.Plan {
+  background: $lightGray;
+  padding: toRem(20);
+  border-radius: 8px;
+  display: grid;
+  gap: toRem(16);
+  &__name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 8px;
+    padding: toRem(16);
+    line-height: 1;
+    font-weight: 800;
+  }
+  &__price-section {
+    display: flex;
+    align-items: center;
+    line-height: 1;
+    column-gap: toRem(16);
+    justify-content: center;
+    .price {
+      font-weight: 900;
+      color: $green;
+      font-size: toRem(40);
+    }
+    .disclaimer {
+      font-size: toRem(10);
+      line-height: toRem(14);
+    }
+  }
+  &__benefits {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    row-gap: toRem(16);
+    .benefit {
+      font-weight: 500;
+      flex-basis: 33%;
+      font-size: toRem(10);
+      min-width: max-content;
+      text-align: center;
+      line-height: 1;
+    }
+  }
+  @media (min-width: toRem(1024)) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__benefits {
+      flex-direction: column;
+      row-gap: toRem(10);
+    }
+  }
+  @media (min-width: toRem(1280)) {
+  }
+}

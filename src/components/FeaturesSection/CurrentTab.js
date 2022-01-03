@@ -1,5 +1,6 @@
 import React from "react";
 import Article from "../Article/Article";
+import FreeTrialButton from "../FreeTrialButton/FreeTrialButton";
 
 function CurrentTab() {
   return (
@@ -24,14 +25,7 @@ function CurrentTab() {
           five centuries, but also the leap into electronic typesetting,
           remaining essentially unchanged.
         </Article>
-        <button className={`FeaturesSection__free-trial`}>
-          Start 14 days free trial
-          <img
-            className="ml-2"
-            src="/assets/arrow-next.svg"
-            alt="start for free"
-          />
-        </button>
+        <FreeTrialButton addStyles={`mt-2 lg:max-w-[248px]`} />
       </div>
     </div>
   );

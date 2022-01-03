@@ -1,0 +1,68 @@
+@import "../../variables.scss";
+.PlansSection {
+  padding-top: toRem(60);
+  padding-bottom: toRem(40);
+  .Article {
+    text-align: left;
+  }
+  &__header {
+    margin-bottom: toRem(24);
+  }
+  &__plan-buttons {
+    margin-top: toRem(16);
+    align-self: center;
+    border-radius: 8px;
+    border: 1px solid $green;
+    overflow: hidden;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-height: toRem(52);
+    button {
+      width: 100%;
+      padding: toRem(16);
+      line-height: 1;
+      font-weight: 800;
+      font-size: toRem(14);
+      &.active {
+        background: $green;
+        color: white;
+      }
+    }
+  }
+  &__plans {
+    display: grid;
+    row-gap: toRem(24);
+  }
+  @media (min-width: toRem(1024)) {
+    padding: toRem(80) 0;
+    &__plan-buttons {
+      margin-top: 0;
+    }
+    .Article {
+      text-align: right;
+    }
+    &__plans {
+      margin-top: toRem(32);
+    }
+    &__header {
+      max-width: toRem(750);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr toRem(222);
+      column-gap: toRem(24);
+      margin-bottom: toRem(32);
+    }
+  }
+  @media (min-width: toRem(1280)) {
+    padding: toRem(120) 0;
+
+    &__header {
+      max-width: toRem(825);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr toRem(222);
+      column-gap: toRem(24);
+    }
+  }
+}

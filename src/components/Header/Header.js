@@ -1,5 +1,6 @@
 import React from "react";
 import Burger from "../Burger";
+import Logo from "../Logo";
 import "./Header.scss";
 const H = "Header";
 const header_anchors = [
@@ -9,11 +10,13 @@ const header_anchors = [
   { link: "#contact", text: "Contact Us" },
 ];
 
-function Header() {
+function Header({ scrolled }) {
   return (
-    <div className={H}>
-      <div className={`cont ${H}__inner-wrapper`}>
-        <img className={`${H}__logo`} src="/assets/logo.svg" alt="Webby logo" />
+    <div className={`${H} ${scrolled ? "scrolled" : ""}`}>
+      <div className={`cont ${H}__inner-wrapper ${scrolled ? "scrolled" : ""}`}>
+        <div className={`${H}__logo`}>
+          <Logo />
+        </div>
         <div className="lg:hidden">
           <Burger />
         </div>

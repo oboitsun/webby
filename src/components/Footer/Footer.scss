@@ -1,0 +1,65 @@
+@import "../../variables.scss";
+.Footer {
+  padding: toRem(30) 0;
+  background: $green;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__logo {
+    max-width: toRem(120);
+  }
+  &__about {
+    font-weight: 500;
+    color: white;
+    font-size: toRem(8);
+    line-height: toRem(18);
+    text-align: center;
+    margin: toRem(16) 0;
+  }
+  &__get-started {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid white;
+    color: white;
+    font-weight: 800;
+    font-size: toRem(14);
+    line-height: 1;
+    padding: toRem(16) 0;
+  }
+  @media (min-width: toRem(1024)) {
+    &__inner {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    &__logo {
+      max-width: toRem(120);
+    }
+    &__about {
+      max-width: toRem(275);
+      margin: 0;
+    }
+    &__get-started {
+      width: max-content;
+
+      padding: toRem(16) toRem(20);
+    }
+  }
+  @media (min-width: toRem(1280)) {
+    &__logo {
+      max-width: toRem(180);
+    }
+    &__about {
+      max-width: toRem(346);
+      font-size: toRem(10);
+      line-height: toRem(24);
+      margin: 0;
+    }
+    &__get-started {
+      width: max-content;
+
+      padding: toRem(16) toRem(20);
+    }
+  }
+}
