@@ -5,6 +5,14 @@
   .Article {
     text-align: center;
   }
+  &__gradient {
+    z-index: 1;
+    background-image: -webkit-linear-gradient(
+      top,
+      rgba(255, 255, 255, 0.001) 0%,
+      $lightGray 100%
+    );
+  }
   &__clients-reviews {
     display: grid;
     gap: toRem(24);

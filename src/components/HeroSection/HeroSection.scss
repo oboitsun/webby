@@ -1,6 +1,15 @@
 @import "../../variables.scss";
 .HeroSection {
   padding: toRem(102) 0;
+  &__gradient {
+    @apply absolute bottom-0 left-0 w-full h-full;
+    z-index: 1;
+    background-image: -webkit-linear-gradient(
+      top,
+      rgba(255, 255, 255, 0.001) 0%,
+      #fff 100%
+    );
+  }
   &__h1 {
     font-weight: 900;
     font-size: toRem(24);

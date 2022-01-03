@@ -17,7 +17,7 @@ function FeaturesSection() {
         </Article>
       </div>
       <div className="w-screen overflow-x-hidden relative">
-        <div className="w-1/12 bg-gradient-to-l from-white to-transparent h-full absolute right-0 top-0 z-10 lg:hidden"></div>
+        <div className="w-1/12 FeaturesSection__gradient h-full absolute right-0 top-0 z-10 lg:hidden"></div>
         <div className="w-full overflow-x-auto ml-10 my-5 relative FeaturesSection__tabs ">
           <div className="flex flex-wrap  min-w-[774px] lg:my-10   ">
             {tabs.map((tab, i) => (

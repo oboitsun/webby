@@ -60,7 +60,7 @@ function Reviews() {
           {setActive ? "Show less" : "Show more"}
         </button>
         <div
-          className={`absolute bottom-10 left-0 w-full bg-gradient-to-t from-lightGray to-transparent transition-all ${
+          className={`absolute bottom-10 left-0 w-full Reviews__gradient transition-all ${
             setActive ? "h-10" : "h-40"
           }`}
         ></div>

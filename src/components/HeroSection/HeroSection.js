@@ -5,7 +5,7 @@ const HS = "HeroSection";
 function HeroSection() {
   return (
     <div className="HeroSection  relative">
-      <div className="absolute bottom-0 left-0 w-full h-full bg-gradient-to-t from-white to-transparent z-[1]"></div>
+      <div className={`${HS}__gradient`}></div>
       <img
         className="o object-cover w-full h-full top-0 left-0 absolute opacity-[3%]"
         src="/assets/pattern.png"

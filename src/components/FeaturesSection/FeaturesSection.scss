@@ -4,6 +4,14 @@
   .Article {
     text-align: center;
   }
+  &__gradient {
+    z-index: 1;
+    background-image: -webkit-linear-gradient(
+      left,
+      rgba(255, 255, 255, 0.001) 0%,
+      #fff 100%
+    );
+  }
   &__tabButton {
     &.active {
       background: $green;
