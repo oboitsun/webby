@@ -1,12 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import ArrowNext from "../ArrowNext";
+import FreeTrialPopup from "../FreeTrialPopup/FreeTrialPopup";
 import "./FreeTrial.scss";
 function FreeTrialButton({ addStyles }) {
+  const [showPopup, setShowPopup] = useState(false);
+  const handleShowPopup = () => {
+    setShowPopup(!showPopup);
+  };
   return (
-    <button className={`FreeTrial ${addStyles}`}>
-      Start 14 days free trial
-      <ArrowNext />
-    </button>
+    <>
+      <button onClick={handleShowPopup} className={`FreeTrial ${addStyles}`}>
+        Start 14 days free trial
+        <ArrowNext />
+      </button>
+      <FreeTrialPopup showPopup={showPopup} closePopup={handleShowPopup} />
+    </>
   );
 }
 

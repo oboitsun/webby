@@ -1,21 +1,23 @@
 import React from "react";
 import Article from "../Article/Article";
 import FreeTrialButton from "../FreeTrialButton/FreeTrialButton";
-
-function CurrentTab() {
+import { tabs } from "./content";
+function CurrentTab({ current }) {
+  const currentTab = tabs.find((tab) => tab.label === current);
+  console.log(currentTab);
   return (
     <div className={`FeaturesSection__currentTab`}>
       <div className="my-8 lg:my-0">
         <img className="" src={"/assets/ipad.png"} alt="ipad" />
       </div>
       <div className="flex flex-col justify-center">
-        <p className="heading flex items-center">
+        <p className="heading flex items-center capitalize">
           <img
             className="mr-2 w-5 lg:w-8"
-            src={"/assets/features/projects.svg"}
-            alt="projects"
+            src={currentTab.iconSrc}
+            alt={currentTab.label}
           />
-          Projects
+          {currentTab.label}
         </p>
         <Article>
           Lorem Ipsum is simply dummy text of the printing and typesetting

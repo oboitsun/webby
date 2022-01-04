@@ -19,7 +19,7 @@ function Footer() {
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy
           </div>
-          <div className="grid grid-cols-2 gap-x-8 gap-y-2">
+          <div className="lg:grid grid-cols-2 gap-x-8 gap-y-2 hidden">
             {header_anchors.map((anchor, i) => (
               <div className="text-sm text-white underline" key={i}>
                 {anchor.text}
@@ -27,7 +27,9 @@ function Footer() {
             ))}
           </div>
           <button className="Footer__get-started">Get started</button>
-          <button className="text-white font-bold ">Login</button>
+          <button className="text-white font-bold hidden lg:block">
+            Login
+          </button>
         </div>
       </div>
     </div>

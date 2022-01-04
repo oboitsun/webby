@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Article from "../Article/Article";
 import SectionHeading from "../SectionHeading/SectionHeading";
 import "./FeaturesSection.scss";
@@ -7,6 +7,10 @@ import TabButton from "./TabButton";
 import CurrentTab from "./CurrentTab";
 const FS = "FeaturesSection";
 function FeaturesSection() {
+  const [currentTab, setCurrentTab] = useState("projects");
+  const handleCurrentTab = (value) => {
+    setCurrentTab(value);
+  };
   return (
     <div className={FS}>
       <div className="cont">
@@ -21,13 +25,18 @@ function FeaturesSection() {
         <div className="w-full overflow-x-auto ml-10 my-5 relative FeaturesSection__tabs ">
           <div className="flex flex-wrap  min-w-[774px] lg:my-10   ">
             {tabs.map((tab, i) => (
-              <TabButton key={i} tab={tab} />
+              <TabButton
+                current={currentTab}
+                handleCurrentTab={handleCurrentTab}
+                key={i}
+                tab={tab}
+              />
             ))}
           </div>
         </div>
       </div>
       <div className="cont">
-        <CurrentTab />
+        <CurrentTab current={currentTab} />
       </div>
     </div>
   );

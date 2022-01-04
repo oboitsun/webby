@@ -1,11 +1,18 @@
 import React from "react";
 
-function TabButton({ tab }) {
+function TabButton({ tab, current, handleCurrentTab }) {
+  const active = current === tab.label;
   return (
-    <div className={`FeaturesSection__tabButton`}>
-      <div className="icon">
+    <div
+      value={tab.label}
+      onClick={() => {
+        handleCurrentTab(tab.label);
+      }}
+      className={`FeaturesSection__tabButton ${active ? "active" : ""}`}
+    >
+      <span className="icon">
         <img className="" src={tab.iconSrc} alt={tab.label} />
-      </div>
+      </span>
       <span>{tab.label}</span>
     </div>
   );

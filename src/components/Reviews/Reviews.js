@@ -8,7 +8,7 @@ function Reviews() {
   const [visibleReviews, setVisibleReviews] = useState(6);
   const [readMore, setReadMore] = useState(false);
   const [setActive, setActiveState] = useState("");
-  const [setHeight, setHeightState] = useState("80px");
+  const [setHeight, setHeightState] = useState("0px");
   const content = useRef(null);
   useEffect(() => {
     const screenWidth = window.innerWidth;
@@ -19,7 +19,7 @@ function Reviews() {
   function toggleAccordion() {
     setActiveState(setActive === "" ? "active" : "");
     setHeightState(
-      setActive === "active" ? "80px" : `${content.current.scrollHeight}px`
+      setActive === "active" ? "0px" : `${content.current.scrollHeight}px`
     );
   }
   return (

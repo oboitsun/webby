@@ -1,7 +1,8 @@
 @import "../../variables.scss";
 .FreeTrial {
   width: 100%;
-  padding: toRem(16) 0;
+  padding: toRem(16);
+
   @apply flex items-center justify-center font-extrabold;
   font-size: toRem(14);
   color: white;

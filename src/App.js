@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Benefits from "./components/Benefits/Benefits";
 import FeaturesSection from "./components/FeaturesSection/FeaturesSection";
 import Footer from "./components/Footer/Footer";
+import FreeTrialPopup from "./components/FreeTrialPopup/FreeTrialPopup";
 import Header from "./components/Header/Header";
 import HeroSection from "./components/HeroSection/HeroSection";
 import PlansSection from "./components/PlansSection/PlansSection";
@@ -35,6 +36,7 @@ function App() {
       <Reviews />
       <PlansSection />
       <Footer />
+      {/* <FreeTrialPopup /> */}
       <div className="text-xs text-center py-6 leading-none">
         © Webby 2022. All Rights Reserved
       </div>
