@@ -1,13 +1,23 @@
 import React from "react";
 import Logo from "../Logo";
+import { Link } from "react-scroll";
 import "./Footer.scss";
 const header_anchors = [
-  { link: "#about", text: "About Us" },
-  { link: "#reviews", text: "Reviews" },
-  { link: "#plans", text: "Plans" },
-  { link: "#contact", text: "Contact Us" },
+  { link: "about", text: "About Us" },
+  { link: "services", text: "Services" },
+  { link: "reviews", text: "Reviews" },
+  { link: "plans", text: "Plans" },
+  ,
 ];
 function Footer() {
+  const linkProps = {
+    spy: true,
+    smooth: true,
+    offset: -100,
+    duration: 500,
+    activeClass: "active",
+    className: "cursor-pointer",
+  };
   return (
     <div className="Footer">
       <div className="cont">
@@ -21,9 +31,14 @@ function Footer() {
           </div>
           <div className="lg:grid grid-cols-2 gap-x-8 gap-y-2 hidden">
             {header_anchors.map((anchor, i) => (
-              <div className="text-sm text-white underline" key={i}>
+              <Link
+                to={anchor.link}
+                {...linkProps}
+                className="text-sm text-white underline"
+                key={i}
+              >
                 {anchor.text}
-              </div>
+              </Link>
             ))}
           </div>
           <button className="Footer__get-started">Get started</button>

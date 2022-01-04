@@ -23,7 +23,7 @@ function Reviews() {
     );
   }
   return (
-    <div className="Reviews">
+    <div id="reviews" className="Reviews">
       <div className="cont">
         <SectionHeading>
           <span className="text-green">10,000+</span> people love us

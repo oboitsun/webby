@@ -12,7 +12,7 @@ function FeaturesSection() {
     setCurrentTab(value);
   };
   return (
-    <div className={FS}>
+    <div id="services" className={FS}>
       <div className="cont">
         <SectionHeading>Manage your company with ease!</SectionHeading>
         <Article>

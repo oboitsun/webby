@@ -12,7 +12,7 @@ function PlansSection() {
     setPlanPeriod(e.target.value);
   };
   return (
-    <div className="PlansSection">
+    <div id="plans" className="PlansSection">
       <div className="cont">
         <SectionHeading>Choose a plan that suits you</SectionHeading>
         <div className={`${PS}__header `}>

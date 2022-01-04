@@ -58,7 +58,7 @@ function Benefits() {
       }));
   }, []);
   return (
-    <div className="Benefits">
+    <div id="about" className="Benefits">
       <div className="cont">
         <SectionHeading>
           Your business needs a <span className="text-green">better shape</span>{" "}
