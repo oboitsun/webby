@@ -16,7 +16,6 @@ function Footer() {
     offset: -100,
     duration: 500,
     activeClass: "active",
-    className: "cursor-pointer",
   };
   return (
     <div className="Footer">
@@ -34,15 +33,17 @@ function Footer() {
               <Link
                 to={anchor.link}
                 {...linkProps}
-                className="text-sm text-white underline"
+                className="text-sm text-white underline cursor-pointer"
                 key={i}
               >
                 {anchor.text}
               </Link>
             ))}
           </div>
-          <button className="Footer__get-started">Get started</button>
-          <button className="text-white font-bold hidden lg:block">
+          <button className="Footer__get-started cursor-pointer">
+            Get started
+          </button>
+          <button className="text-white font-bold hidden lg:block cursor-pointer">
             Login
           </button>
         </div>

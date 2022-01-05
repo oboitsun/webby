@@ -18,7 +18,6 @@ function Header({ scrolled }) {
     offset: -100,
     duration: 500,
     activeClass: "active",
-    className: "cursor-pointer",
   };
   return (
     <div className={`${H} ${scrolled ? "scrolled" : ""}`}>
@@ -35,13 +34,13 @@ function Header({ scrolled }) {
               to={anchor.link}
               {...linkProps}
               key={i}
-              className={`${H}__anchor`}
+              className={`${H}__anchor cursor-pointer`}
             >
               {anchor.text}
             </Link>
           ))}
-          <div className={`${H}__getStarted`}>Get started</div>
-          <div className={`${H}__anchor`}>Login</div>
+          <div className={`${H}__getStarted cursor-pointer`}>Get started</div>
+          <div className={`${H}__anchor cursor-pointer`}>Login</div>
         </div>
       </div>
     </div>

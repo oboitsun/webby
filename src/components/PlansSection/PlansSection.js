@@ -12,8 +12,14 @@ function PlansSection() {
     setPlanPeriod(e.target.value);
   };
   return (
-    <div id="plans" className="PlansSection">
-      <div className="cont">
+    <div id="plans" className="PlansSection relative">
+      <div className={`HeroSection__gradient`}></div>
+      <img
+        className="o object-cover w-full h-full top-0 left-0 absolute opacity-[3%]"
+        src="/assets/pattern.png"
+        alt="pattern"
+      />
+      <div className="cont relative z-[2]">
         <SectionHeading>Choose a plan that suits you</SectionHeading>
         <div className={`${PS}__header `}>
           <Article>

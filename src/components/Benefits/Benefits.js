@@ -56,6 +56,12 @@ function Benefits() {
         slidesPerView: 3.6,
         spaceBetween: 50,
       }));
+    screenWidth > 1920 &&
+      setSliderProps((prev) => ({
+        ...prev,
+        slidesPerView: 5.6,
+        spaceBetween: 50,
+      }));
   }, []);
   return (
     <div id="about" className="Benefits">

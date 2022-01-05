@@ -8,7 +8,9 @@ function TabButton({ tab, current, handleCurrentTab }) {
       onClick={() => {
         handleCurrentTab(tab.label);
       }}
-      className={`FeaturesSection__tabButton ${active ? "active" : ""}`}
+      className={`FeaturesSection__tabButton cursor-pointer hover:shadow-md transition-all ${
+        active ? "active shadow-md" : ""
+      }`}
     >
       <span className="icon">
         <img className="" src={tab.iconSrc} alt={tab.label} />

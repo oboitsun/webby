@@ -4,7 +4,6 @@ import FreeTrialButton from "../FreeTrialButton/FreeTrialButton";
 import { tabs } from "./content";
 function CurrentTab({ current }) {
   const currentTab = tabs.find((tab) => tab.label === current);
-  console.log(currentTab);
   return (
     <div className={`FeaturesSection__currentTab`}>
       <div className="my-8 lg:my-0">

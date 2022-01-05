@@ -2,6 +2,7 @@ import React from "react";
 import FreeTrialButton from "../FreeTrialButton/FreeTrialButton";
 import "./PopupPlan.scss";
 function PopupPlan({ picked, plan, choosePlan }) {
+  const isPicked = picked === plan.name;
   const handlePickPlan = (name) => {
     choosePlan(name);
   };
@@ -10,8 +11,8 @@ function PopupPlan({ picked, plan, choosePlan }) {
       onClick={() => {
         handlePickPlan(plan.name);
       }}
-      className={`PopupPlan border cursor-pointer ${
-        picked ? "border-green " : "border-lightGray"
+      className={`PopupPlan border cursor-pointer snap-start min-w-[210px]  ${
+        isPicked ? "border-green " : "border-lightGray"
       }`}
     >
       <div className="PopupPlan__name capitalize">{plan.name}</div>
@@ -25,11 +26,11 @@ function PopupPlan({ picked, plan, choosePlan }) {
 
       <div className="PopupPlan__benefits capitalize">
         <p className="benefit">{plan.features[0]}</p>
-        <div className="h-5 w-px bg-black opacity-10  mx-8 "></div>
+        <div className=" h-5 w-px bg-black opacity-10  mx-2 "></div>
         <p className="benefit">{plan.features[1]}</p>
         <p className="benefit ">{plan.features[2]}</p>
       </div>
-      <button className={`PopupPlan__button ${picked ? "picked" : ""}`}>
+      <button className={`PopupPlan__button ${isPicked ? "picked" : ""}`}>
         {picked ? "You have chosen this plan" : " Select this plan"}
       </button>
     </div>

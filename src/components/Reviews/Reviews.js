@@ -15,7 +15,7 @@ function Reviews() {
     screenWidth > 1279 && setVisibleReviews(9);
   }, []);
   const visible = reviews.slice(0, visibleReviews);
-  const rest = reviews.slice(visibleReviews, reviews.length - 1);
+  const rest = reviews.slice(visibleReviews, reviews.length);
   function toggleAccordion() {
     setActiveState(setActive === "" ? "active" : "");
     setHeightState(
@@ -55,7 +55,7 @@ function Reviews() {
           onClick={toggleAccordion}
           className={`w-full justify-center flex text-green font-bold mt-10 ${
             readMore ? "showMore" : ""
-          } z-[4] relative`}
+          } z-[2] relative`}
         >
           {setActive ? "Show less" : "Show more"}
         </button>
