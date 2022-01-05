@@ -5,12 +5,14 @@ import Footer from "./components/Footer/Footer";
 import FreeTrialPopup from "./components/FreeTrialPopup/FreeTrialPopup";
 import Header from "./components/Header/Header";
 import HeroSection from "./components/HeroSection/HeroSection";
+import ModalMenu from "./components/ModalMenu/ModalMenu";
 import PlansSection from "./components/PlansSection/PlansSection";
 import Reviews from "./components/Reviews/Reviews";
 
 function App() {
   const [scrolled, setScrolled] = useState(false);
   const [width, setWidth] = useState(0);
+  const [showMenu, setShowMenu] = useState(false);
   const handleScroll = (e) => {
     if (e.target.scrollingElement.scrollTop < 10) setScrolled(false);
     if (e.target.scrollingElement.scrollTop >= 10) setScrolled(true);
@@ -29,7 +31,11 @@ function App() {
   });
   return (
     <div>
-      <Header scrolled={scrolled} />
+      <Header
+        showMenu={showMenu}
+        setShowMenu={setShowMenu}
+        scrolled={scrolled}
+      />
       <HeroSection />
       <Benefits />
       <FeaturesSection />
@@ -37,6 +43,7 @@ function App() {
       <PlansSection />
       <Footer />
       {/* <FreeTrialPopup /> */}
+      <ModalMenu showMenu={showMenu} setShowMenu={setShowMenu} />
       <div className="text-xs text-center py-6 leading-none">
         © Webby 2022. All Rights Reserved
       </div>

@@ -25,9 +25,9 @@
     padding: 0 toRem(40);
   }
   &__popup {
-    margin-top: 20px;
+    margin-top: 40px;
 
-    max-height: calc(100vh - 100px);
+    max-height: calc(100vh - 200px);
     overflow-y: scroll;
     width: 100%;
     position: relative;

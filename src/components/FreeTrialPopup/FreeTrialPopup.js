@@ -85,6 +85,12 @@ function FreeTrialPopup({ picked, showPopup, closePopup }) {
   };
   return (
     <div className={`${FTP} ${showPopup ? "show" : ""}`}>
+      <div
+        onClick={closePopup}
+        className="absolute text-white right-5 top-10 lg:top-1/6 lg:right-20 rotate-[45deg]  text-5xl cursor-pointer"
+      >
+        +
+      </div>
       <div onClick={closePopup} className={`${FTP}__backdrop`}>
         <div
           onClick={(e) => {

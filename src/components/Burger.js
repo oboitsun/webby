@@ -1,6 +1,7 @@
+import React from "react";
 import { motion } from "framer-motion";
 
-const Burger = ({ setShowMenu, showMenu }) => {
+const Burger = React.memo(({ setShowMenu, showMenu }) => {
   const variants = {
     open: { rotate: 0, transition: { duration: 0.5 } },
     close: (custom) => ({
@@ -24,7 +25,7 @@ const Burger = ({ setShowMenu, showMenu }) => {
     />
   );
   return (
-    <div>
+    <div className="relative z-30">
       <svg
         onClick={() => {
           setShowMenu(!showMenu);
@@ -66,6 +67,6 @@ const Burger = ({ setShowMenu, showMenu }) => {
       </svg>
     </div>
   );
-};
+});
 
 export default Burger;

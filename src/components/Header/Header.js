@@ -11,7 +11,7 @@ const header_anchors = [
   { link: "plans", text: "Plans" },
 ];
 
-function Header({ scrolled }) {
+function Header({ scrolled, showMenu, setShowMenu }) {
   const linkProps = {
     spy: true,
     smooth: true,
@@ -20,13 +20,17 @@ function Header({ scrolled }) {
     activeClass: "active",
   };
   return (
-    <div className={`${H} ${scrolled ? "scrolled" : ""}`}>
-      <div className={`cont ${H}__inner-wrapper ${scrolled ? "scrolled" : ""}`}>
+    <div className={`${H}  ${scrolled || showMenu ? "scrolled" : ""}`}>
+      <div
+        className={`cont ${H}__inner-wrapper ${
+          scrolled || showMenu ? "scrolled" : ""
+        }`}
+      >
         <div className={`${H}__logo`}>
           <Logo />
         </div>
-        <div className="lg:hidden">
-          <Burger />
+        <div className="lg:hidden ">
+          <Burger showMenu={showMenu} setShowMenu={setShowMenu} />
         </div>
         <div className="hidden lg:flex items-center gap-10 xl:gap-14">
           {header_anchors.map((anchor, i) => (

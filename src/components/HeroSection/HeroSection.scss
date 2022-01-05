@@ -32,8 +32,35 @@
       color: black;
     }
   }
+  .swiper {
+    height: toRem(36);
+    .text {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      font-size: toRem(24);
+    }
+  }
+
+  .swiper-slide {
+    text-align: center;
+
+    background: #fff;
+  }
+
+  .swiper-slide {
+    width: 100%;
+    height: 100%;
+    // height: 40px;
+  }
   @media (min-width: toRem(1024)) {
     padding: toRem(160) 0;
+    .swiper {
+      height: toRem(52);
+      .text {
+        font-size: toRem(32);
+      }
+    }
     &__h1 {
       font-size: toRem(32);
     }
@@ -45,6 +72,12 @@
     &__h1 {
       font-size: toRem(44);
       margin-bottom: toRem(16);
+    }
+    .swiper {
+      .text {
+        font-size: toRem(44);
+      }
+      height: toRem(54);
     }
     .Article {
       max-width: toRem(502);
